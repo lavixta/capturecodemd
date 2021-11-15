@@ -60,7 +60,7 @@ M.capture_code = function(telescope_opts)
 			actions.select_default:replace(function()
 				-- actions.close(prompt_bufnr)
 				yank_text = vim.fn.getreg("0")
-				file_path = action_state.get_selected_entry().value
+				file_path = action_state.get_selected_entry()
 				if file_path == nil then
 					local filename = action_state.get_current_line()
 					print("Do you want to create " .. filename .. ".md note and paste your copy into it y/n ?")
@@ -79,6 +79,7 @@ M.capture_code = function(telescope_opts)
 					end
 				else
 					actions.close(prompt_bufnr)
+					file_path = action_state.get_selected_entry().value
 					local new_buf = vim.api.nvim_create_buf(false, true)
 					local win = popwin.create_win(new_buf)
 					setCommentWithEnter(new_buf)
