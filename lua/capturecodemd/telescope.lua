@@ -25,8 +25,8 @@ local current_file_type = vim.bo.filetype
 M = {}
 M.addComment = function()
 	local comment = vim.api.nvim_get_current_line()
-	local destination_file = io.popen(file_path, "w")
-	destination_file:write(comment .. "\n" .. "```" .. current_file_type .. "\n" .. yank_text .. "```")
+	local destination_file = io.open(file_path, "a")
+	destination_file:write("`n" .. comment .. "\n" .. "```" .. current_file_type .. "\n" .. yank_text .. "```")
 	destination_file:close()
 	vim.cmd("stopinsert")
 	vim.cmd("q")
