@@ -20,15 +20,15 @@ I strongly suggest you to use this plugin with vimwiki as it will help you to ta
   ```
 **Usage**
 yank the code you want to copy 
-![yank code](/Users/me/Desktop/yankcode.png)
+![yank code](./media/yankcode.png)
 Then type ":Capturecode" or you can map it to make it more convient 
 Then a Telescope appear and you select the file you want to paste into
 
-![telescope](/Users/me/Desktop/telescope.png)
+![telescope](./nedia/telescope.png)
 
 If name of file you want to paste into does not available you can just type it into the telescope picker and it will create a new one 
 
 Then a commit message box appear and you can type your comment of the coppied code 
 
-![comment](/Users/me/Desktop/comment.png)
+![comment](./media/comment.png)
 
