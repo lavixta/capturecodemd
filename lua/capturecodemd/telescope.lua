@@ -9,7 +9,7 @@ local utils = require("capturecodemd.utils")
 local my_path = c_conf.options.path
 local f = os.execute(('[ -d "%s" ]'):format(my_path))
 if f then
-	print("there already notes directory!,please move or rename the directory and try again!")
+	return
 else
 	os.execute("mkdir " .. my_path)
 end
