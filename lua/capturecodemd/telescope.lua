@@ -7,8 +7,7 @@ local c_conf = require("capturecodemd.config")
 local popwin = require("capturecodemd.popwin")
 local utils = require("capturecodemd.utils")
 local my_path = c_conf.options.path
-local f = os.execute(('[ -d "%s" ]'):format(my_path))
-print(f)
+local f = os.execute(('[ -e "%s" ]'):format(my_path))
 if not f then
 	print("create dir" .. my_path)
 	os.execute("mkdir " .. my_path)
