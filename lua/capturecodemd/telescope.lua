@@ -60,7 +60,7 @@ M.capture_code = function(telescope_opts)
 			actions.select_default:replace(function()
 				-- actions.close(prompt_bufnr)
 				yank_text = vim.fn.getreg("0")
-				file_path = action_state.get_selected_entry()
+				file_path = action_state.get_selected_entry().value
 				if file_path == nil then
 					local filename = action_state.get_current_line()
 					print("Do you want to create " .. filename .. ".md note and paste your copy into it y/n ?")
