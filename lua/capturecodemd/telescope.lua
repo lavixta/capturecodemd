@@ -71,7 +71,7 @@ M.capture_code = function(telescope_opts)
 						actions.close(prompt_bufnr)
 						local new_buf = vim.api.nvim_create_buf(false, true)
 						local win = popwin.create_win(new_buf)
-						file_path = c_conf.my_path .. "/" .. filename .. ".md"
+						file_path = my_path .. "/" .. filename .. ".md"
 						-- clear messages
 						table.insert(md_files, file_path)
 						vim.api.nvim_command("normal! :")
