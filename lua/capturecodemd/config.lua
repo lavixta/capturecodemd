@@ -1,6 +1,6 @@
 local M = {}
 local defaults = {
-	path = "posts",
+	path = "/Users/me/.config/notes",
 }
 M.options = {}
 

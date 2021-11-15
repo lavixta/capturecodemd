@@ -7,6 +7,12 @@ local c_conf = require("capturecodemd.config")
 local popwin = require("capturecodemd.popwin")
 local utils = require("capturecodemd.utils")
 local my_path = c_conf.options.path
+local f = os.execute(('[ -d "%s" ]'):format(my_path))
+if f then
+	print("there already notes directory!,please move or rename the directory and try again!")
+else
+	os.execute("mkdir " .. my_path)
+end
 local dir = io.popen('find "' .. my_path .. '" -type f')
 -- Create a collection of files
 local md_files = {}
