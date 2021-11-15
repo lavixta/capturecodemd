@@ -48,7 +48,7 @@ M.capture_code = function(telescope_opts)
 		finder = finders.new_table({
 			results = md_files,
 			entry_maker = function(entry)
-				local displayPath = string.gsub(entry, ".+posts/", "")
+				local displayPath = string.gsub(entry, ".+notes/", "")
 				return {
 					value = entry,
 					display = displayPath,
