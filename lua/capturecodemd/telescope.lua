@@ -8,9 +8,7 @@ local popwin = require("capturecodemd.popwin")
 local utils = require("capturecodemd.utils")
 local my_path = c_conf.options.path
 local f = os.execute(('[ -d "%s" ]'):format(my_path))
-if f then
-	return
-else
+if not f then
 	os.execute("mkdir " .. my_path)
 end
 local dir = io.popen('find "' .. my_path .. '" -type f')
