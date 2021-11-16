@@ -34,5 +34,10 @@ If name of file you want to paste into does not available you can just type it i
 
 Then a commit message box appear and you can type your comment of the coppied code 
 
-![comment](./media/comment.png)
+![comment](./media/comment.png)   
+
+**TODO**
+- implement the taking note with cmp. To make note as completed suggestion when write code 
+- Combine it with Vimwiki 
+- Create a blog website with show off the note you have taken 
 
