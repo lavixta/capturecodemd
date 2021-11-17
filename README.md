@@ -26,7 +26,7 @@ Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 yank the code you want to copy 
 ![yank code](./media/yankcode.png)
 Then type ":Capturecode" or you can map it to make it more convient 
-Then a Telescope appear and you select the file you want to paste into
+Then a Telescope appear and you select the file you want to paste into in the Telescope picker
 
 ![telescope](./media/telescope.png)
 
