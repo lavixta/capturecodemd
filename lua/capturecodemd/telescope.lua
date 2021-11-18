@@ -20,13 +20,18 @@ for filename in dir:lines() do
 end
 dir:close()
 local yank_text
+local coppy_text
 local file_path
 local current_file_type = vim.bo.filetype
 M = {}
 M.addComment = function()
 	local comment = vim.api.nvim_get_current_line()
 	local destination_file = io.open(file_path, "a")
-	destination_file:write("\n" .. comment .. "\n" .. "```" .. current_file_type .. "\n" .. yank_text .. "```")
+	if coppy_text ~= nil then
+		destination_file:write("\n" .. comment .. "\n" .. "```" .. current_file_type .. "\n" .. coppy_text .. "```")
+	else
+		destination_file:write("\n" .. comment .. "\n" .. "```" .. current_file_type .. "\n" .. yank_text .. "```")
+	end
 	destination_file:close()
 	vim.cmd("stopinsert")
 	vim.cmd("q")
@@ -61,6 +66,7 @@ M.capture_code = function(telescope_opts)
 			actions.select_default:replace(function()
 				-- actions.close(prompt_bufnr)
 				yank_text = vim.fn.getreg("0")
+				coppy_text = vim.fn.getreg("*")
 				file_path = action_state.get_selected_entry()
 				if file_path == nil then
 					local filename = action_state.get_current_line()
