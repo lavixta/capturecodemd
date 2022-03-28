@@ -22,7 +22,7 @@ Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
    })
   ```
 **Usage**   
-
+***Yank the code inside your nvim*** 
 yank the code you want to copy 
 ![yank code](./media/yankcode.png)
 Then type ":Capturecode" or you can map it to make it more convient 
@@ -36,6 +36,7 @@ Then a commit message box appear and you can type your comment of the coppied co
 
 ![comment](./media/comment.png)   
 
+If you coppy the code outside your nvim. Just reapeat the step and specify type of your code (pyth:w) after wrtitting 
 **TODO**
 - implement the taking note with cmp. To make note as completed suggestion when write code 
 - Combine it with Vimwiki 
